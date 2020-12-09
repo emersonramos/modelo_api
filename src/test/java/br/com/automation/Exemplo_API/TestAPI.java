@@ -27,11 +27,11 @@ public class TestAPI{
     {
 	
 		//loga no end-point
-		RestAssured.baseURI = "https://api-hml.brasilprev.com.br/v1/autenticacao/login";
+		RestAssured.baseURI = "https://<ADDRESS>";
 		io.restassured.specification.RequestSpecification requestspecs = given();
 		requestspecs.log();
 		requestspecs.contentType("application/json");
-		requestspecs.header("x-api-key", "KClztmXPjT59tTXbrLgce1bMd9n5jphq2Szv3AXM");
+		requestspecs.header("x-api-key", "<KEY>");
 		requestspecs.header("Authorization", "bearer UUxXUk1iUFpQWGY2Mm9GczRHOFhtU0dVelg1dGhiMzI6TWRnS3ltSk1aR2tDejVvbktEcUVOSlByWXlLRVl1dFltNVlCc3NGRlJMVGJXVUtlU0RVckFxUkE0WnhKVWl1cg==");
 		requestspecs.relaxedHTTPSValidation();
 		
@@ -39,8 +39,8 @@ public class TestAPI{
 		try {
 //			ConnectionDB.main();
 		String json = ("{\n" + 
-				"	\"cpf\": \"38995063831\",\n" + 
-				"	\"senha\": \"15151515\"\n" + 
+				"	\"cpf\": \"<NUMBER>\",\n" + 
+				"	\"senha\": \"<PASS>\"\n" + 
 				"}");
 		System.out.println("LOG: O request será: " + json);
 		guardaRequest = json; 
