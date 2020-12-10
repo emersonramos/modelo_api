@@ -27,11 +27,11 @@ public class APIPage {
 	io.restassured.specification.RequestSpecification requestspecs = given();
 
 	public void carregaAPI() {
-		RestAssured.baseURI = "https://api-hml.brasilprev.com.br/v1/autenticacao/login";
+		RestAssured.baseURI = "<ADDRESS>";
 
 		requestspecs.log();
 		requestspecs.contentType("application/json");
-		requestspecs.header("x-api-key", "KClztmXPjT59tTXbrLgce1bMd9n5jphq2Szv3AXM");
+		requestspecs.header("x-api-key", "<KEY");
 		requestspecs.header("Authorization",
 				"bearer UUxXUk1iUFpQWGY2Mm9GczRHOFhtU0dVelg1dGhiMzI6TWRnS3ltSk1aR2tDejVvbktEcUVOSlByWXlLRVl1dFltNVlCc3NGRlJMVGJXVUtlU0RVckFxUkE0WnhKVWl1cg==");
 		requestspecs.relaxedHTTPSValidation();
